@@ -1,34 +1,42 @@
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         res = []
-        top = 0 
+        top = 0
         bottom = len(matrix)
         left = 0
         right = len(matrix[0])
 
-        while left < right and top < bottom:
-            # Start moving right (along the top row)
+        while top < bottom and left < right:
+            # Move right along the top boundary
             for col in range(left, right):
                 res.append(matrix[top][col])
+
+            # Update the top boundary
             top += 1
 
-            # Start moving down (along the right col)
+            # Move down along the right boundary
             for row in range(top, bottom):
-                res.append(matrix[row][right - 1])
+                res.append(matrix[row][right-1])
+
+            # Update the right boundary
             right -= 1
 
-            # Check if the statement still holds
-            if not (left < right and top < bottom):
+            # Perform intermediate check of the condition
+            if not (top < bottom and left < right):
                 break
 
-            # Start moving left (along the bottom row)
+            # Move left along the bottom boundary
             for col in range(right - 1, left - 1, -1):
                 res.append(matrix[bottom - 1][col])
+
+            # Update the bottom boundary
             bottom -= 1
 
-            # Start moving up (along the left col)
+            # Move up along the left boundary
             for row in range(bottom - 1, top - 1, -1):
                 res.append(matrix[row][left])
-            left += 1
 
+            # Update the left boundary
+            left += 1
+            
         return res
