@@ -1,8 +1,6 @@
 A list of design/simulation related leetcode problems
 
-https://leetcode.com/problems/diagonal-traverse/description/?envType=problem-list-v2&envId=simulation
 https://leetcode.com/problems/solve-the-equation/description/?envType=problem-list-v2&envId=simulation
-https://leetcode.com/problems/robot-return-to-origin/description/?envType=problem-list-v2&envId=simulation
 https://leetcode.com/problems/asteroid-collision/description/?envType=problem-list-v2&envId=simulation
 https://leetcode.com/problems/walking-robot-simulation/description/?envType=problem-list-v2&envId=simulation
 https://leetcode.com/problems/spiral-matrix-iii/description/?envType=problem-list-v2&envId=simulation
